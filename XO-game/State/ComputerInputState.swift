@@ -1,40 +1,36 @@
 //
-//  PlayerInputState.swift
+//  ComputerInputState.swift
 //  XO-game
 //
-//  Created by Andrey Antropov on 17.05.2020.
+//  Created by Vitaly Khomatov on 26.05.2020.
 //  Copyright © 2020 plasmon. All rights reserved.
 //
 
 import Foundation
 
-class PlayerInputState: GameState {
-    var currentPlayer: Player? { player }
-    
-    
-    let player: Player
-    let markViewPrototype: MarkView
+class ComputerInputState: GameState {
+   var currentPlayer: Player? { player }
+       
+       
+       let player: Player
+       let markViewPrototype: MarkView
+       
     
     weak var gameViewController: GameViewController?
     var isCompleted: Bool = false
     
-    init(player: Player, gameViewController: GameViewController?, markViewPrototype: MarkView) {
+   init(player: Player, gameViewController: GameViewController?, markViewPrototype: MarkView) {
         self.player = player
         self.gameViewController = gameViewController
         self.markViewPrototype = markViewPrototype
     }
     
     func begin() {
-        switch player {
-        case .first:
-            gameViewController?.firstPlayerTurnLabel.isHidden = false
-            gameViewController?.secondPlayerTurnLabel.isHidden = true
-        case .second:
+
             gameViewController?.firstPlayerTurnLabel.isHidden = true
-            gameViewController?.secondPlayerTurnLabel.text = "2nd player"
+            gameViewController?.secondPlayerTurnLabel.text = "Computer"
             gameViewController?.secondPlayerTurnLabel.isHidden = false
-        }
-        gameViewController?.winnerLabel.isHidden = true
+            gameViewController?.winnerLabel.isHidden = true
     }
     
     func addMark(at position: GameboardPosition) {
@@ -42,17 +38,10 @@ class PlayerInputState: GameState {
         
         // ведем лог ходов
         Logger.shared.did(action: .playerDidAMove(player: player, position: position))
-        
-//        guard let busyCell = gameViewController?.gameboard.contains(player: player, at: position) else { return }
-//
-//        if !busyCell {
-        // 
         gameViewController?.gameboardView.placeMarkView(markViewPrototype, at: position)
         gameViewController?.gameboard.setPlayer(player, at: position)
         
         isCompleted = true
-//        } else {
-//            print("Клетка занята")
-//        }
     }
-}
+    
+} 

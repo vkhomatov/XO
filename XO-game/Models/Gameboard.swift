@@ -35,8 +35,24 @@ public final class Gameboard {
     
     public func contains(player: Player, at position: GameboardPosition) -> Bool {
         let (column, row) = (position.column, position.row)
-        return positions[column][row] == player
+        return positions[column][row] == player //|| positions[column][row] != nil
     }
+    
+    
+    public func containsXO(at positions: [GameboardPosition]) -> Bool {
+        for position in positions {
+            guard containsXO(at: position) else {
+                return false
+            }
+        }
+        return true
+    }
+    
+    public func containsXO(at position: GameboardPosition) -> Bool {
+        let (column, row) = (position.column, position.row)
+        return positions[column][row] != nil
+    }
+    
     
     public var gotAvailablePositions: Bool {
         positions.flatMap { $0 }.contains(nil)

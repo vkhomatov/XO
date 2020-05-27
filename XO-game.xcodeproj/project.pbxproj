@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5826E331247CF68000F57CFF /* ComputerInputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5826E330247CF68000F57CFF /* ComputerInputState.swift */; };
+		584E706C24768111009921C0 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584E706B24768111009921C0 /* MenuViewController.swift */; };
 		B06EBC32247171DC00A4B479 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06EBC31247171DC00A4B479 /* GameState.swift */; };
 		B06EBC352471726000A4B479 /* PlayerInputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06EBC342471726000A4B479 /* PlayerInputState.swift */; };
 		B06EBC372471760800A4B479 /* GameFinishedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06EBC362471760800A4B479 /* GameFinishedState.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5826E330247CF68000F57CFF /* ComputerInputState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerInputState.swift; sourceTree = "<group>"; };
+		584E706B24768111009921C0 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		B06EBC31247171DC00A4B479 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		B06EBC342471726000A4B479 /* PlayerInputState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInputState.swift; sourceTree = "<group>"; };
 		B06EBC362471760800A4B479 /* GameFinishedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFinishedState.swift; sourceTree = "<group>"; };
@@ -70,6 +74,7 @@
 			children = (
 				B06EBC31247171DC00A4B479 /* GameState.swift */,
 				B06EBC342471726000A4B479 /* PlayerInputState.swift */,
+				5826E330247CF68000F57CFF /* ComputerInputState.swift */,
 				B06EBC362471760800A4B479 /* GameFinishedState.swift */,
 			);
 			path = State;
@@ -99,6 +104,7 @@
 				B06EBC332471722300A4B479 /* State */,
 				F874E4702224621100364CAE /* AppDelegate.swift */,
 				F874E4722224621100364CAE /* GameViewController.swift */,
+				584E706B24768111009921C0 /* MenuViewController.swift */,
 				F874E4F02225DFF700364CAE /* Referee.swift */,
 				F874E4E62225CB3F00364CAE /* Models */,
 				F874E4E52225CB3100364CAE /* Views */,
@@ -213,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5826E331247CF68000F57CFF /* ComputerInputState.swift in Sources */,
 				B06EBC352471726000A4B479 /* PlayerInputState.swift in Sources */,
 				F874E4732224621100364CAE /* GameViewController.swift in Sources */,
 				F874E4DD2225C25D00364CAE /* GameboardPosition.swift in Sources */,
@@ -226,6 +233,7 @@
 				F874E4F32225E0B100364CAE /* GameboardSize.swift in Sources */,
 				B06EBC372471760800A4B479 /* GameFinishedState.swift in Sources */,
 				F874E4E42225CB0700364CAE /* XView.swift in Sources */,
+				584E706C24768111009921C0 /* MenuViewController.swift in Sources */,
 				B06EBC32247171DC00A4B479 /* GameState.swift in Sources */,
 				F874E4DB2225C1AC00364CAE /* GameboardView.swift in Sources */,
 				B06EBC3B247187C900A4B479 /* LogComand.swift in Sources */,

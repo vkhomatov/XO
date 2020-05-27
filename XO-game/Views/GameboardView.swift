@@ -21,7 +21,7 @@ public class GameboardView: UIView {
     
     internal struct Constants {
         static let lineColor: UIColor = .black
-        static let lineWidth: CGFloat = 7
+        static let lineWidth: CGFloat = 3
     }
     
     // MARK: - Private Properties
@@ -51,15 +51,18 @@ public class GameboardView: UIView {
         updateFrame(for: markView, at: position)
         markViewForPosition[position] = markView
         addSubview(markView)
+       // sleep(1)
     }
     
-    public func removeMarkView(at position: GameboardPosition) {
-        guard let markView = markViewForPosition[position] else {
-            return
-        }
-        markViewForPosition[position] = nil
-        markView.removeFromSuperview()
-    }
+    
+    // удаляет марку(крестик или нолик) с поля - НЕ СПОЛЬЗУЕТСЯ
+//    public func removeMarkView(at position: GameboardPosition) {
+//        guard let markView = markViewForPosition[position] else {
+//            return
+//        }
+//        markViewForPosition[position] = nil
+//        markView.removeFromSuperview()
+//    }
     
     // MARK: - UIView
     
@@ -76,8 +79,14 @@ public class GameboardView: UIView {
         guard let touchLocation = touches.first?.location(in: self) else { return }
         let position = GameboardPosition(column: determineColumn(for: touchLocation),
                                          row: determineRow(for: touchLocation))
+        
         onSelectPosition?(position)
+       // sleep(1)
     }
+    
+    
+    
+    
     
     // MARK: - UI
     
@@ -142,4 +151,5 @@ public class GameboardView: UIView {
                                 height: rowHeight).insetBy(dx: 0.5 * Constants.lineWidth,
                                                            dy: 0.5 * Constants.lineWidth)
     }
+    
 }
