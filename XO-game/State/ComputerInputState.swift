@@ -27,9 +27,10 @@ class ComputerInputState: GameState {
     
     func begin() {
 
-            gameViewController?.firstPlayerTurnLabel.isHidden = true
-            gameViewController?.secondPlayerTurnLabel.text = "Computer"
-            gameViewController?.secondPlayerTurnLabel.isHidden = false
+        //    gameViewController?.secondPlayerTurnLabel.textColor = .red
+           // gameViewController?.firstPlayerTurnLabel.isHidden = true
+            gameViewController?.secondPlayerTurnLabel.text = "Computer - O"
+         //   gameViewController?.secondPlayerTurnLabel.isHidden = false
             gameViewController?.winnerLabel.isHidden = true
     }
     

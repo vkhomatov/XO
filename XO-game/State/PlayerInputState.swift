@@ -27,12 +27,32 @@ class PlayerInputState: GameState {
     func begin() {
         switch player {
         case .first:
-            gameViewController?.firstPlayerTurnLabel.isHidden = false
-            gameViewController?.secondPlayerTurnLabel.isHidden = true
+           // gameViewController?.firstPlayerTurnLabel.textColor = .green
+          //  gameViewController?.secondPlayerTurnLabel.textColor = .red
+            if !gameViewController!.playWithComputer {
+                gameViewController?.firstPlayerTurnLabel.text = "1st player - X"
+                gameViewController?.secondPlayerTurnLabel.text = "2nd player - O"
+
+            } else {
+                gameViewController?.firstPlayerTurnLabel.text = "Player - X"
+                gameViewController?.secondPlayerTurnLabel.text = "Computer - O"
+
+
+            }
+
+          //  gameViewController?.firstPlayerTurnLabel.isHidden = false
+          //  gameViewController?.secondPlayerTurnLabel.isHidden = true
         case .second:
-            gameViewController?.firstPlayerTurnLabel.isHidden = true
-            gameViewController?.secondPlayerTurnLabel.text = "2nd player"
-            gameViewController?.secondPlayerTurnLabel.isHidden = false
+          //  gameViewController?.firstPlayerTurnLabel.isHidden = true
+        //    gameViewController?.firstPlayerTurnLabel.textColor = .red
+            if !gameViewController!.playWithComputer {
+                gameViewController?.secondPlayerTurnLabel.text = "2nd player - O"
+            } else {
+               gameViewController?.secondPlayerTurnLabel.text = "Computer - O"
+
+            }
+           // gameViewController?.secondPlayerTurnLabel.text = "2nd player"
+         //   gameViewController?.secondPlayerTurnLabel.isHidden = false
         }
         gameViewController?.winnerLabel.isHidden = true
     }

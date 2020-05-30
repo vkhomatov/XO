@@ -9,9 +9,7 @@
 import UIKit
 
 class MenuViewController: UIViewController {
-    
-    //weak var gameViewController: GameViewController?
-    
+        
     var playWithComputer: Bool = false
 
     override func viewDidLoad() {
@@ -36,17 +34,17 @@ class MenuViewController: UIViewController {
         
     }
     
-    @IBAction func PlayerValueChanged(_ sender: UISegmentedControl) {
-        let player = sender.selectedSegmentIndex
-        switch player {
-        case 0:
-            print("Второй игрок")
-        case 1:
-            print("Компьютер")
-        default:
-            break
-        }
-    }
+//    @IBAction func PlayerValueChanged(_ sender: UISegmentedControl) {
+//        let player = sender.selectedSegmentIndex
+//        switch player {
+//        case 0:
+//            print("Второй игрок")
+//        case 1:
+//            print("Компьютер")
+//        default:
+//            break
+//        }
+//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         

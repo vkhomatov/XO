@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5826E331247CF68000F57CFF /* ComputerInputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5826E330247CF68000F57CFF /* ComputerInputState.swift */; };
+		5826E333248200B500F57CFF /* ComputerBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5826E332248200B500F57CFF /* ComputerBrain.swift */; };
 		584E706C24768111009921C0 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584E706B24768111009921C0 /* MenuViewController.swift */; };
 		B06EBC32247171DC00A4B479 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06EBC31247171DC00A4B479 /* GameState.swift */; };
 		B06EBC352471726000A4B479 /* PlayerInputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06EBC342471726000A4B479 /* PlayerInputState.swift */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		5826E330247CF68000F57CFF /* ComputerInputState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerInputState.swift; sourceTree = "<group>"; };
+		5826E332248200B500F57CFF /* ComputerBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerBrain.swift; sourceTree = "<group>"; };
 		584E706B24768111009921C0 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		B06EBC31247171DC00A4B479 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		B06EBC342471726000A4B479 /* PlayerInputState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInputState.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				F874E4F22225E0B100364CAE /* GameboardSize.swift */,
 				F874E4F42225E2CD00364CAE /* Gameboard.swift */,
 				F874E4EE2225DE4500364CAE /* Player.swift */,
+				5826E332248200B500F57CFF /* ComputerBrain.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				584E706C24768111009921C0 /* MenuViewController.swift in Sources */,
 				B06EBC32247171DC00A4B479 /* GameState.swift in Sources */,
 				F874E4DB2225C1AC00364CAE /* GameboardView.swift in Sources */,
+				5826E333248200B500F57CFF /* ComputerBrain.swift in Sources */,
 				B06EBC3B247187C900A4B479 /* LogComand.swift in Sources */,
 				F874E4EF2225DE4500364CAE /* Player.swift in Sources */,
 			);
