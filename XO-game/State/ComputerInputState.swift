@@ -9,29 +9,23 @@
 import Foundation
 
 class ComputerInputState: GameState {
-   var currentPlayer: Player? { player }
-       
-       
-       let player: Player
-       let markViewPrototype: MarkView
-       
+    var currentPlayer: Player? { player }
+    
+    let player: Player
+    let markViewPrototype: MarkView
     
     weak var gameViewController: GameViewController?
     var isCompleted: Bool = false
     
-   init(player: Player, gameViewController: GameViewController?, markViewPrototype: MarkView) {
+    init(player: Player, gameViewController: GameViewController?, markViewPrototype: MarkView) {
         self.player = player
         self.gameViewController = gameViewController
         self.markViewPrototype = markViewPrototype
     }
     
     func begin() {
-
-        //    gameViewController?.secondPlayerTurnLabel.textColor = .red
-           // gameViewController?.firstPlayerTurnLabel.isHidden = true
-            gameViewController?.secondPlayerTurnLabel.text = "Computer - O"
-         //   gameViewController?.secondPlayerTurnLabel.isHidden = false
-            gameViewController?.winnerLabel.isHidden = true
+        gameViewController?.secondPlayerTurnLabel.text = "Computer - O"
+        gameViewController?.winnerLabel.isHidden = true
     }
     
     func addMark(at position: GameboardPosition) {
@@ -44,5 +38,5 @@ class ComputerInputState: GameState {
         
         isCompleted = true
     }
-    
+
 } 

@@ -8,9 +8,10 @@
 
 import Foundation
 
-// анализ предыдущих ходов и генерация хода компьютера
 class ComputerBrain {
     
+    // анализ предыдущих ходов и генерация хода компьютера
+
     func generatePosition(xoPositions: [[GameboardPosition]], gameboard: Gameboard, X: Int, O: Int) -> GameboardPosition {
         
         // генерируем рэндомный ход
@@ -172,3 +173,43 @@ class ComputerBrain {
     return position
     }
 }
+
+
+
+// анализ предыдущих ходов и генерация хода компьютера исходя из Gameboard, недописана так как реализация без использования Gameboard схожая
+  /*   func generatePositionByGameBoard(gameboard: Gameboard) -> GameboardPosition  {
+      var X: Int = 0
+      var O: Int = 0
+      var columnX: [Int] = [0,0,0]
+      var columnO: [Int] = [0,0,0]
+      var rowX: [Int] = [0,0,0]
+      var rowO: [Int] = [0,0,0]
+      var winX: Bool = false
+      var winO: Bool = false
+      var position = GameboardPosition(column: Int.random(in: 0 ..< GameboardSize.columns), row: Int.random(in: 0 ..< GameboardSize.rows), sing: O)
+
+      
+      for row in 0 ..< GameboardSize.rows {
+          for column in 0 ..< GameboardSize.columns {
+              if gameboard.positions[row][column] == Player.first {
+                  columnX[column] = 10
+                 // X += 1
+              } else if gameboard.positions[row][column] == Player.second {
+               //   O += 1
+                  columnO[column] = 1
+              }
+          }
+         if columnX.reduce(0, +) == 20 {
+          if let cell = columnX.firstIndex(of: 0) {
+
+           position = GameboardPosition(column: cell, row: row, sing: O)
+                         return position
+         }
+          }
+          
+          if O == 2 {
+              
+          }
+      }
+      return position
+  } */

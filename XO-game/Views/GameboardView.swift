@@ -55,14 +55,16 @@ public class GameboardView: UIView {
     }
     
     
-    // удаляет марку(крестик или нолик) с поля - НЕ СПОЛЬЗУЕТСЯ
-//    public func removeMarkView(at position: GameboardPosition) {
-//        guard let markView = markViewForPosition[position] else {
-//            return
-//        }
-//        markViewForPosition[position] = nil
-//        markView.removeFromSuperview()
-//    }
+   //  удаляет марку(крестик или нолик) с поля - НЕ СПОЛЬЗУЕТСЯ
+    public func removeMarkView(at position: GameboardPosition) {
+        guard let markView = markViewForPosition[position] else {
+            return
+        }
+        markViewForPosition[position] = nil
+        markView.removeFromSuperview()
+     //   setNeedsLayout()
+     //   setNeedsDisplay()
+    }
     
     // MARK: - UIView
     

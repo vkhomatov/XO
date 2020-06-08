@@ -12,5 +12,5 @@ public struct GameboardPosition: Hashable {
     
     public let column: Int
     public let row: Int
-    public var sing: Int?
+    public var sing: Int? // Добавлен параметр показывающий знак X или O
 }

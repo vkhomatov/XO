@@ -21,8 +21,6 @@ class GameFinishedState: GameState {
     
     func begin() {
         Logger.shared.did(action: .gameFinished(winner: currentPlayer))
-     //   gameViewController?.firstPlayerTurnLabel.isHidden = true
-     //   gameViewController?.secondPlayerTurnLabel.isHidden = true
         gameViewController?.winnerLabel.isHidden = false
         
         let winnerText: String

@@ -82,7 +82,7 @@ public final class Referee {
         result.append(array)
     }
     
-    private func doesPlayerHaveWinningCombination(_ player: Player) -> Bool {
+    func doesPlayerHaveWinningCombination(_ player: Player) -> Bool {
         for winningPositions in winningCombinations {
             if gameboard.contains(player: player, at: winningPositions) {
                 return true

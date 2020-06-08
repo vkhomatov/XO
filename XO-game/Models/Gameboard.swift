@@ -12,7 +12,7 @@ public final class Gameboard {
     
     // MARK: - Properties
     
-    private lazy var positions: [[Player?]] = initialPositions()
+    lazy var positions: [[Player?]] = initialPositions()
     
     // MARK: - public
     

@@ -56,8 +56,10 @@ public class MarkView: UIView, Copying {
     // MARK: - Init
     
     public init() {
+       //  DispatchQueue.main.sync {
         super.init(frame: CGRect(origin: .zero,
                                  size: CGSize(width: 90, height: 90)))
+       // }
     }
     
     public required init?(coder aDecoder: NSCoder) {
